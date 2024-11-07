@@ -6,10 +6,11 @@ Scenery images come to life with our model, offering realistic and engaging visu
 2. [Training Progression](#training-progression)
 3. [Model Training](#model-training)
 4. [Getting Started](#getting-started)
+5. [Failed Trials](#failed-trials)
 
 # Examples
 
-### Here are some images created by the image generator:  
+### Here are some images created by the image generator:
 ![5x5 Scenery Image](scenery_gan/assets/5x5_1.png)
 
 ### Same image generated from first to latest versions:
@@ -105,3 +106,31 @@ To use this model, follow these steps:
     # Since the seed is same, same images will be generated
     gan.generate_images(9, show=True, noise=seed)
     ```
+
+# Failed Trials
+
+Not every version went as planned! Here are a few trials that didn’t quite work out but helped me learn along the way.
+
+### The Overambitious Model
+
+This version added more input nodes and some layer tweaks. It started out well, but partway through, it got confused and began learning in the wrong direction.
+
+- **Trainable Parameters:** 67,879,671
+
+![Version 2 - Progression GIF](scenery_gan/assets/failed_models/version2.gif)
+
+### The Quick Learner
+
+For this version, I made a few more layer changes, and the model learned quickly. Unfortunately, it ran into similar issues as *"The Overambitious Model"*, struggling to stay on the right path.
+
+- **Trainable Parameters:** 67,104,631
+
+![Version 3 - Progression GIF](scenery_gan/assets/failed_models/version3.gif)
+
+### The Model That Tried Everything
+
+For this version, I reset the input nodes and adjusted layers again. This one was interesting—it kept trying to learn something new each time but couldn’t quite nail down the correct results.
+
+- **Trainable Parameters:** 17,462,791
+
+![Version 4 - Progression GIF](scenery_gan/assets/failed_models/version4.gif)

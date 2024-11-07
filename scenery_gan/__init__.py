@@ -1,5 +1,5 @@
-from .models import ScenaryGAN
+from .models import SceneryGAN
 
 __all__ = (
-    'ScenaryGAN'
+    'SceneryGAN'
 )
